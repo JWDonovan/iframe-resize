@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta
+      content="IE=edge"
+      http-equiv="X-UA-Compatible">
+    <meta
+      content="width=device-width, initial-scale=1.0"
+      name="viewport">
+    <title>Child</title>
+  </head>
+  <body>
+    <p>Child Page</p>
+    <button id="resize-iframe-button">Resize iFrame</button>
+
+    <script>
+      const resizeIframeButton = document.getElementById("resize-iframe-button");
+      resizeIframeButton.addEventListener("click", () => {
+        window.parent.document.querySelector("iframe").width = "100%";
+      }, false);
+    </script>
+  </body>
+</html>
